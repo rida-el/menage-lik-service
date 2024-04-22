@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Demander des services",
+    "text": "Choisissez la prestation, la date et l’horaire, directement depuis notre site Web ou notre application mobile.",
+    "image": "/assets/team/icons/1.png"
+  },
+  
+  {
+    "title": "Mise en relation",
+    "text": "Nous vous enverrons une confirmation dans la journée avec les coordonnées de la dame qui va venir à des prix fixes. ",
+    "image": "/assets/team/icons/2.png"
+
+  },
+  {
+    "title": "Profiter",
+    "text": "Votre technicien exécute le travail selon vos instructions. Vous pouvez la payer directement à la fin de la séance.",
+    "image": "/assets/team/icons/3.png"
+
+  }
+]
