@@ -33,15 +33,19 @@ const About = () => {
                 </div>
               </div>
               <div>
-                <h2 className="text-left text-3xl font-semibold text-primaryColor md:text-4xl">
-                  À propos de nous
-                </h2>
+                <div className="flex flex-col gap-1">
+                  <h1 className="text-left text-3xl font-semibold text-primaryColor md:text-4xl">
+                    À propos de nous
+                  </h1>
+                  <div className="w-12 border-4 border-secondaryColor font-medium text-secondaryColor"></div>
+                </div>
                 <p className="mt-5 text-lg ">
                   Nous sommes une équipe de nettoyage à domicile détenue et
                   exploitée par une famille. Notre équipe est composée de frères
-                  et sœurs, de beaux-parents, de cousins, d&apos;amis et d&apos;employés
-                  de longue date. Ensemble, nous prenons soin des gens, partout
-                  dans la région Souss Massa. Rencontrez notre équipe.
+                  et sœurs, de beaux-parents, de cousins, d&apos;amis et
+                  d&apos;employés de longue date. Ensemble, nous prenons soin
+                  des gens, partout dans la région Souss Massa. Rencontrez notre
+                  équipe.
                 </p>
                 <Button
                   variant="outline"
@@ -54,7 +58,7 @@ const About = () => {
           </div>
         </div>
       </section>
-      <div className="bg-primaryColorLight absolute top-0 -z-10 h-[70%] w-full"></div>
+      <div className="absolute top-0 -z-10 h-[70%] w-full bg-primaryColorLight"></div>
     </div>
   );
 };

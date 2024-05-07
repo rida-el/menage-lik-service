@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
+import { ParticulierBooking } from "~/components/particulierBooking";
 import { Button } from "~/components/ui/button";
 import { Switch } from "~/components/ui/switch";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "~/components/ui/tabs";
@@ -85,12 +86,14 @@ const Services = () => {
                 votre visite des lieux et bénéficier de notre expertise en
                 matière de nettoyage professionnel.
               </p>
-              <Button
-                variant="outline"
-                className="mt-6 rounded-md bg-secondaryColor text-primaryColor hover:scale-105 hover:border-secondaryColor"
-              >
-                Réserver maintenant
-              </Button>
+              <ParticulierBooking>
+                <Button
+                  variant="outline"
+                  className="mt-6 rounded-md bg-secondaryColor text-primaryColor hover:scale-105 hover:border-secondaryColor"
+                >
+                  Réserver maintenant
+                </Button>
+              </ParticulierBooking>
               <div className="container relative h-[30rem] border-2 border-secondaryColor bg-[url(/assets/s2.jpg)] bg-cover bg-center bg-no-repeat object-cover">
                 <div className="absolute right-0 top-0 h-full w-full bg-black/30"></div>
               </div>
@@ -127,12 +130,14 @@ const Services = () => {
                 votre visite des lieux et bénéficier de notre expertise en
                 matière de nettoyage professionnel.
               </p>
-              <Button
-                variant="outline"
-                className="mt-6 rounded-md bg-secondaryColor text-primaryColor hover:scale-105 hover:border-secondaryColor"
-              >
-                Réserver maintenant
-              </Button>
+              <ParticulierBooking>
+                <Button
+                  variant="outline"
+                  className="mt-6 rounded-md bg-secondaryColor text-primaryColor hover:scale-105 hover:border-secondaryColor"
+                >
+                  Réserver maintenant
+                </Button>
+              </ParticulierBooking>
               <div className="container relative h-[30rem] border-2 border-secondaryColor bg-[url(/assets/s1.jpg)] bg-cover bg-center bg-no-repeat object-cover">
                 <div className="absolute right-0 top-0 h-full w-full bg-black/30"></div>
               </div>
@@ -171,12 +176,14 @@ const Services = () => {
                 cuisine. Nos techniciens s&apos;engagent à fournir un service de
                 qualité, respectant nos valeurs fondamentales telles que
               </p>
-              <Button
-                variant="outline"
-                className="mt-6 rounded-md bg-secondaryColor text-primaryColor hover:scale-105 hover:border-secondaryColor"
-              >
-                Réserver maintenant
-              </Button>
+              <ParticulierBooking>
+                <Button
+                  variant="outline"
+                  className="mt-6 rounded-md bg-secondaryColor text-primaryColor hover:scale-105 hover:border-secondaryColor"
+                >
+                  Réserver maintenant
+                </Button>
+              </ParticulierBooking>
               <div className="container relative h-[30rem] border-2 border-secondaryColor bg-[url(/assets/gm.jpg)] bg-cover bg-center bg-no-repeat object-cover">
                 <div className="absolute right-0 top-0 h-full w-full bg-black/30"></div>
               </div>
@@ -213,12 +220,14 @@ const Services = () => {
                 qualité, avec des professionnels expérimentés, évalués après
                 chaque séance pour assurer votre satisfaction totale.
               </p>
-              <Button
-                variant="outline"
-                className="mt-6 rounded-md bg-secondaryColor text-primaryColor hover:scale-105 hover:border-secondaryColor"
-              >
-                Réserver maintenant
-              </Button>
+              <ParticulierBooking>
+                <Button
+                  variant="outline"
+                  className="mt-6 rounded-md bg-secondaryColor text-primaryColor hover:scale-105 hover:border-secondaryColor"
+                >
+                  Réserver maintenant
+                </Button>
+              </ParticulierBooking>
               <div className="container relative h-[30rem] border-2 border-secondaryColor bg-[url(/assets/nv.jpg)] bg-cover bg-center bg-no-repeat object-cover">
                 <div className="absolute right-0 top-0 h-full w-full bg-black/30"></div>
               </div>
@@ -237,30 +246,32 @@ const Services = () => {
                 <div className="w-12 border-b-4 border-secondaryColor"></div>
               </div>
               <p className="text-center">
-                Félicitations ! Vous êtes sur le point de bénéficier d&apos;un espace
-                parfaitement nettoyé, sans traces. Pour ceux qui estiment que le
-                nettoyage après travaux est un luxe, nos tarifs abordables
-                rendent ce service accessible à tous. Nos services spécialiste
-                s&apos;engagent à traiter vous et vos matériaux avec le plus haut
-                niveau de qualité. Nos services incluent: *Personnel de
-                confiance. *Réservation facile, abordable, rapide et sécurisé.
-                *Liberté de modifier ou d&apos;annuler votre réservation a tout
-                moment, sans engagement. Possibilité de choisir vos techniciens
-                favoris. Suivi attentif de votre réservation. Technicien
-                expérimenté, vérifier avant chaque intervention et évalués après
-                chaque séance. Nos techniciens adhérents à notre engagement
-                simple: Offrir un service de qualité répondant aux attentes de
-                nos clients. Afin de rendre les corvées ménagère un lointain
-                souvenir. Ils s&apos;engagent également à respecter nos 6 valeurs
-                fondamentales: * Intégrité * Courtoisie * Fiabilité * discrétion
-                * autonomie * ponctualité
+                Félicitations ! Vous êtes sur le point de bénéficier d&apos;un
+                espace parfaitement nettoyé, sans traces. Pour ceux qui estiment
+                que le nettoyage après travaux est un luxe, nos tarifs
+                abordables rendent ce service accessible à tous. Nos services
+                spécialiste s&apos;engagent à traiter vous et vos matériaux avec
+                le plus haut niveau de qualité. Nos services incluent:
+                *Personnel de confiance. *Réservation facile, abordable, rapide
+                et sécurisé. *Liberté de modifier ou d&apos;annuler votre
+                réservation a tout moment, sans engagement. Possibilité de
+                choisir vos techniciens favoris. Suivi attentif de votre
+                réservation. Technicien expérimenté, vérifier avant chaque
+                intervention et évalués après chaque séance. Nos techniciens
+                adhérents à notre engagement simple: Offrir un service de
+                qualité répondant aux attentes de nos clients. Afin de rendre
+                les corvées ménagère un lointain souvenir. Ils s&apos;engagent
+                également à respecter nos 6 valeurs fondamentales: * Intégrité *
+                Courtoisie * Fiabilité * discrétion * autonomie * ponctualité
               </p>
-              <Button
-                variant="outline"
-                className="mt-6 rounded-md bg-secondaryColor text-primaryColor hover:scale-105 hover:border-secondaryColor"
-              >
-                Réserver maintenant
-              </Button>
+              <ParticulierBooking>
+                <Button
+                  variant="outline"
+                  className="mt-6 rounded-md bg-secondaryColor text-primaryColor hover:scale-105 hover:border-secondaryColor"
+                >
+                  Réserver maintenant
+                </Button>
+              </ParticulierBooking>
               <div className="container relative h-[30rem] border-2 border-secondaryColor bg-[url(/assets/aw.jpg)] bg-cover bg-center bg-no-repeat object-cover">
                 <div className="absolute right-0 top-0 h-full w-full bg-black/30"></div>
               </div>

@@ -4,6 +4,7 @@ import AboutUs from "~/components/sections/aboutUs";
 import CarouselSection from "~/components/sections/carousel";
 import Comment from "~/components/sections/comment";
 import ContactUs from "~/components/sections/contactUs";
+import Feedbacks from "~/components/sections/feedbacks";
 import HeroSection from "~/components/sections/heroSection";
 import Services from "~/components/sections/services";
 
@@ -52,6 +53,7 @@ export default function Home() {
       <About />
       <Services />
       <Comment />
+      <Feedbacks />
       <CarouselSection />
     </>
   );
