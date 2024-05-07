@@ -80,18 +80,16 @@ export function ParticulierBooking({ children }: ParticulierBookingProps) {
           notify();
         },
         (error) => {
-          if (error?.text === "The email address is badly formatted.") {
-            toast.error("L'adresse e-mail est mal formatée", {
-              position: "top-center",
-              autoClose: 5000,
-              hideProgressBar: false,
-              closeOnClick: true,
-              pauseOnHover: true,
-              draggable: true,
-              progress: undefined,
-              theme: "light",
-            });
-          }
+          toast.error("L'adresse e-mail est mal formatée", {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+          });
         },
       );
   };
