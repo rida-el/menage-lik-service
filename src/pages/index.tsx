@@ -5,6 +5,7 @@ import CarouselSection from "~/components/sections/carousel";
 import Comment from "~/components/sections/comment";
 import ContactUs from "~/components/sections/contactUs";
 import Feedbacks from "~/components/sections/feedbacks";
+import Footer from "~/components/sections/footer";
 import HeroSection from "~/components/sections/heroSection";
 import Services from "~/components/sections/services";
 
@@ -49,12 +50,13 @@ export default function Home() {
       </main> */}
       <HeroSection />
       <AboutUs />
-      <div className="h-24"></div>
+      <div className="h-0 md:h-24"></div>
       <About />
       <Services />
       <Comment />
-      <Feedbacks />
       <CarouselSection />
+      <Feedbacks />
+      <Footer />
     </>
   );
 }

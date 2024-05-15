@@ -13,7 +13,7 @@ import {
 
 const Feedbacks = () => {
   return (
-    <section className="f container my-28 flex min-h-[400px] justify-between">
+    <section className="container mt-28 flex min-h-[400px] justify-between flex-col md:flex-row">
       <div className="flex w-full flex-col gap-6">
         <div>
           <h1 className="w-full max-w-sm text-left text-3xl font-semibold text-primaryColor md:text-4xl">
@@ -28,7 +28,7 @@ const Feedbacks = () => {
         </p>
       </div>
       <div className="h-8"></div>
-      <div className="flex w-full items-center justify-center">
+      <div className="flex w-full items-center justify-center py-6">
         <Carousel
           opts={{
             align: "start",
@@ -36,7 +36,7 @@ const Feedbacks = () => {
           orientation="vertical"
           className="w-full max-w-xs"
         >
-          <CarouselContent className="h-[200px] py-4">
+          <CarouselContent className="h-[300px] py-4">
             {Array.from({ length: 5 }).map((_, index) => (
               <CarouselItem key={index} className="pt-1">
                 <div className="flex h-full items-center justify-center rounded-md border bg-card bg-white p-1  text-card-foreground ">

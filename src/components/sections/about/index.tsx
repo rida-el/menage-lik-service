@@ -4,10 +4,10 @@ import { Button } from "~/components/ui/button";
 
 const About = () => {
   return (
-    <div className="relative h-[calc(100vh-12rem)] w-screen">
+    <div className="relative min-h-[calc(100vh-12rem)] h-full w-screen ">
       <section id="about" className="h-full">
         <div className="container mx-auto h-full md:py-20">
-          <div className="flex h-full items-center justify-center gap-12">
+          <div className="flex h-full items-center justify-center gap-12 flex-col-reverse md:flex-row">
             <div className="relative mt-10 md:mt-0">
               <Image
                 src="/assets/about.png"

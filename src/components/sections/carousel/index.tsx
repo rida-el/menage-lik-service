@@ -15,7 +15,7 @@ const CarouselSection = () => {
         <h2 className="text-left text-3xl font-semibold text-primaryColor md:text-4xl">
           Nos services
         </h2>
-        <p className="max-w-[70%] text-center">
+        <p className="w-full text-center md:max-w-[70%]">
           Tout bâtiment. Toute industrie. À toute heure. Un environnement propre
           et sain est essentiel pour toutes les entreprises et installations,
           quel que soit le secteur. Maintenant plus que jamais, des méthodes de
@@ -29,13 +29,13 @@ const CarouselSection = () => {
         opts={{
           align: "start",
         }}
-        className="w-full"
+        className=" mx-auto gap-2 w-[90%]"
       >
-        <CarouselContent className="flex w-full gap-2">
+        <CarouselContent className="flex ">
           {data.map((item, index) => (
             <CarouselItem
               key={index}
-              className="w-[90%] border-2 border-secondaryColor !p-0 md:basis-1/2 lg:basis-1/3 "
+              className=" border-2 border-secondaryColor !p-0 md:basis-1/2 lg:basis-1/3 "
             >
               <div className="group flex w-full items-center justify-center gap-2">
                 <div className="absolute z-40 flex h-full w-full items-center justify-center text-white  ">
@@ -43,7 +43,7 @@ const CarouselSection = () => {
                     {item.title}
                   </h2>
                 </div>
-                <div className="relative h-96 w-full object-fill p-2">
+                <div className="relative h-80 w-full object-fill p-2">
                   <Image
                     src={item.image}
                     alt="restaurant"
@@ -56,8 +56,9 @@ const CarouselSection = () => {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
+        <></>
+        <CarouselPrevious className="hidden md:block" />
+        <CarouselNext className="hidden md:block" />
       </Carousel>
     </section>
   );

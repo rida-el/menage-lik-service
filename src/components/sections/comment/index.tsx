@@ -26,12 +26,12 @@ const Comment = () => {
         <div className="container mx-auto flex h-full flex-col justify-between gap-12 md:py-20">
           <div className="flex h-fit w-full flex-col items-center justify-center gap-6 text-center">
             <div className="flex flex-col items-center justify-center gap-1">
-              <h2 className="text-left text-3xl font-semibold text-primaryColor md:text-4xl">
+              <h2 className="text-left text-3xl font-semibold text-primaryColor md:text-4xl py-2">
                 Comment ça fonctionne
               </h2>
               <div className="w-12 border-4 border-secondaryColor font-medium text-secondaryColor"></div>
             </div>
-            <p className="max-w-xl">
+            <p className="max-w-xl pb-4">
               Nous nettoyons votre maison, bureau et tous vous espaces toutes
               les semaines, toutes les deux semaines ou toutes les trois
               semaines.
@@ -39,7 +39,7 @@ const Comment = () => {
           </div>
         </div>
       </section>
-      <div className="container flex h-full items-center justify-center gap-10">
+      <div className="container flex h-full items-center justify-center gap-10 md:flex-row flex-col">
         {data.map((item, index) => (
           <Card className="relative w-[350px] text-center" key={index}>
             <CardHeader className="">

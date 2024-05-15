@@ -7,6 +7,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "~/components/ui/tabs";
 
 const Services = () => {
   const [checked, setChecked] = useState(false);
+  const [checked2, setChecked2] = useState(false);
+
   const [value, setValue] = useState("spn");
   // Define handleCheckedChange within the component scope
 
@@ -27,7 +29,7 @@ const Services = () => {
           semaines, toutes les deux semaines ou toutes les trois semaines.
         </p>
         <div className="flex items-center space-x-2">
-          <h2 className="font-semibold text-primaryColor">
+          <h2 className="text-center font-semibold text-primaryColor">
             Services pour particulier
           </h2>
           <Switch
@@ -35,7 +37,7 @@ const Services = () => {
             checked={checked}
             onCheckedChange={handleCheckedChange}
           />
-          <h2 className="font-semibold text-primaryColor">
+          <h2 className="text-center font-semibold text-primaryColor">
             Services professionnels
           </h2>
         </div>
@@ -48,7 +50,7 @@ const Services = () => {
           className="mt-6 h-full overflow-y-scroll"
         >
           <TabsList className="grid w-full grid-cols-2 gap-2 rounded-none border-b border-primaryColor bg-white px-8">
-            <TabsTrigger value="gm">
+            <TabsTrigger value="gm" className="break-words">
               Service Professionnel de Nettoyage
             </TabsTrigger>
             <TabsTrigger value="rvl">
@@ -57,11 +59,11 @@ const Services = () => {
           </TabsList>
           <TabsContent
             value="gm"
-            className=" border border-t-0 border-primaryColor px-6 py-10"
+            className=" border border-t-0 border-primaryColor px-6 py-10 "
           >
             <div className="flex flex-col items-center gap-3">
               <div className="flex flex-col items-center">
-                <h1 className="font-sans text-3xl uppercase text-primaryColor">
+                <h1 className="text-center font-sans text-3xl uppercase text-primaryColor">
                   Service Professionnel de Nettoyage
                 </h1>
                 <div className="w-12 border-b-4 border-secondaryColor"></div>
@@ -105,7 +107,7 @@ const Services = () => {
           >
             <div className="flex flex-col items-center gap-3">
               <div className="flex flex-col items-center">
-                <h1 className="font-sans text-3xl uppercase text-primaryColor">
+                <h1 className="text-center font-sans text-3xl uppercase text-primaryColor">
                   Réservation par Visite des Lieux
                 </h1>
                 <div className="w-12 border-b-4 border-secondaryColor"></div>
@@ -158,7 +160,7 @@ const Services = () => {
           >
             <div className="flex flex-col items-center gap-3">
               <div className="flex flex-col items-center">
-                <h1 className="font-sans text-3xl uppercase text-primaryColor">
+                <h1 className="text-center font-sans text-3xl uppercase text-primaryColor">
                   Grand menage
                 </h1>
                 <div className="w-12 border-b-4 border-secondaryColor"></div>
@@ -176,7 +178,9 @@ const Services = () => {
                 cuisine. Nos techniciens s&apos;engagent à fournir un service de
                 qualité, respectant nos valeurs fondamentales telles que
               </p>
-              <ParticulierBooking>
+                <ParticulierBooking
+                  buttons={true}
+                >
                 <Button
                   variant="outline"
                   className="mt-6 rounded-md bg-secondaryColor text-primaryColor hover:scale-105 hover:border-secondaryColor"
@@ -196,7 +200,7 @@ const Services = () => {
           >
             <div className="flex flex-col items-center gap-3">
               <div className="flex flex-col items-center">
-                <h1 className="font-sans text-3xl uppercase text-primaryColor">
+                <h1 className="text-center font-sans text-3xl uppercase text-primaryColor">
                   NETTOYAGE DE VITRE
                 </h1>
                 <div className="w-12 border-b-4 border-secondaryColor"></div>
@@ -240,7 +244,7 @@ const Services = () => {
           >
             <div className="flex flex-col items-center gap-3">
               <div className="flex flex-col items-center">
-                <h1 className="font-sans text-3xl text-primaryColor ">
+                <h1 className="text-center font-sans text-3xl text-primaryColor">
                   NETTOYAGE APRÈS TRAVAUX
                 </h1>
                 <div className="w-12 border-b-4 border-secondaryColor"></div>

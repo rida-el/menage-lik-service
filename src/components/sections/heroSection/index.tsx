@@ -3,16 +3,15 @@ import { Button } from "~/components/ui/button";
 
 const HeroSection = () => {
   return (
-    <div className="h-screen w-screen bg-[url('/assets/bg.png')] bg-cover">
+    <div className="h-screen w-screen bg-[url('/assets/bg.png')] bg-cover bg-center">
       <div className="absolute h-full w-full bg-gradient-to-t from-primaryColor to-transparent"></div>
-      <div className="flex h-full w-full items-center justify-center ">
+      <div className="flex h-full w-full items-center justify-center p-2">
         <div className="relative z-20 flex  flex-col items-center justify-center gap-6 bg-white/65 p-7">
           <h1 className="text-center text-5xl font-bold text-primaryColor">
             Prenez du temps pour vous !
             <br />
             Ménage lik services
           </h1>
-
           <p className="max-w-xl text-center text-lg">
             {" "}
             vous propose une gamme complète de services pour vous permettre de
