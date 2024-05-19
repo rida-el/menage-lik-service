@@ -15,6 +15,7 @@ const CarouselSection = () => {
         <h2 className="text-left text-3xl font-semibold text-primaryColor md:text-4xl">
           Nos services
         </h2>
+        <div className="w-12 border-4 border-secondaryColor font-medium text-secondaryColor"></div>
         <p className="w-full text-center md:max-w-[70%]">
           Tout bâtiment. Toute industrie. À toute heure. Un environnement propre
           et sain est essentiel pour toutes les entreprises et installations,
@@ -29,7 +30,7 @@ const CarouselSection = () => {
         opts={{
           align: "start",
         }}
-        className=" mx-auto gap-2 w-[90%]"
+        className=" mx-auto w-[90%] gap-2"
       >
         <CarouselContent className="flex ">
           {data.map((item, index) => (

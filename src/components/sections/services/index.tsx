@@ -22,8 +22,10 @@ const Services = () => {
     <section className="container my-28 flex flex-col justify-between">
       <div className="flex flex-col items-center justify-center gap-3">
         <h1 className="text-center text-3xl font-semibold text-primaryColor md:text-4xl">
-          Our services
+          Question et réponse
         </h1>
+        <div className="w-12 border-4 border-secondaryColor font-medium text-secondaryColor"></div>
+
         <p className="max-w-xl text-center text-gray-400">
           Nous nettoyons votre maison, bureau et tous vous espaces toutes les
           semaines, toutes les deux semaines ou toutes les trois semaines.
@@ -178,9 +180,7 @@ const Services = () => {
                 cuisine. Nos techniciens s&apos;engagent à fournir un service de
                 qualité, respectant nos valeurs fondamentales telles que
               </p>
-                <ParticulierBooking
-                  buttons={true}
-                >
+              <ParticulierBooking buttons={true}>
                 <Button
                   variant="outline"
                   className="mt-6 rounded-md bg-secondaryColor text-primaryColor hover:scale-105 hover:border-secondaryColor"
