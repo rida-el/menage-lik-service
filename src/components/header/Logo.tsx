@@ -3,11 +3,11 @@ import Link from "next/link";
 
 function Logo() {
   return (
-    <Link href="/">
-      <div>
-        <Image src="/assets/logo/logo.svg" alt="Ménage lik services" width={200} height={200} />
-      </div>
-    </Link>
+    <div className="relative h-96 w-60 ">
+      <Link href="/">
+        <Image src="/assets/logo/logo.svg" alt="Ménage lik services" fill />
+      </Link>
+    </div>
   );
 }
 

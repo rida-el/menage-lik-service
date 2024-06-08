@@ -1,5 +1,7 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
+import { useRecoilValue } from "recoil";
+import { windowState } from "~/atoms/states";
 import { ParticulierBooking } from "~/components/particulierBooking";
 import { Button } from "~/components/ui/button";
 import { Switch } from "~/components/ui/switch";
@@ -8,6 +10,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "~/components/ui/tabs";
 const Services = () => {
   const [checked, setChecked] = useState(false);
   const [checked2, setChecked2] = useState(false);
+  const { width } = useRecoilValue(windowState);
 
   const [value, setValue] = useState("spn");
   // Define handleCheckedChange within the component scope
@@ -19,9 +22,12 @@ const Services = () => {
   };
 
   return (
-    <section className="container my-28 flex flex-col justify-between">
+    <section
+      className="container flex flex-col justify-between py-28"
+      id="contact"
+    >
       <div className="flex flex-col items-center justify-center gap-3">
-        <h1 className="text-center text-3xl font-semibold text-primaryColor md:text-4xl">
+        <h1 className="text-center text-3xl uppercase font-semibold text-primaryColor md:text-4xl">
           Question et réponse
         </h1>
         <div className="w-12 border-4 border-secondaryColor font-medium text-secondaryColor"></div>
@@ -52,11 +58,13 @@ const Services = () => {
           className="mt-6 h-full overflow-y-scroll"
         >
           <TabsList className="grid w-full grid-cols-2 gap-2 rounded-none border-b border-primaryColor bg-white px-8">
-            <TabsTrigger value="gm" className="break-words">
-              Service Professionnel de Nettoyage
+            <TabsTrigger value="gm" className="break-words uppercase">
+              {width > 768
+                ? "Service Professionnel de Nettoyage"
+                : "Professionnel"}
             </TabsTrigger>
-            <TabsTrigger value="rvl">
-              Réservation par Visite des Lieux
+            <TabsTrigger value="rvl" className="break-words uppercase">
+              {width > 768 ? "Réservation par Visite des Lieux" : "par Visite"}
             </TabsTrigger>
           </TabsList>
           <TabsContent
@@ -68,7 +76,6 @@ const Services = () => {
                 <h1 className="text-center font-sans text-3xl uppercase text-primaryColor">
                   Service Professionnel de Nettoyage
                 </h1>
-                <div className="w-12 border-b-4 border-secondaryColor"></div>
               </div>
               <p className="text-center">
                 Service Professionnel de Nettoyage - Réservation par Visite des
@@ -112,7 +119,6 @@ const Services = () => {
                 <h1 className="text-center font-sans text-3xl uppercase text-primaryColor">
                   Réservation par Visite des Lieux
                 </h1>
-                <div className="w-12 border-b-4 border-secondaryColor"></div>
               </div>
               <p className="text-center">
                 Service Professionnel de Nettoyage - Réservation par Visite des
@@ -151,9 +157,15 @@ const Services = () => {
       ) : (
         <Tabs defaultChecked defaultValue="gm" className=" overflow-y-scroll">
           <TabsList className="grid w-full grid-cols-3 gap-2 rounded-none border-b border-primaryColor bg-white px-8">
-            <TabsTrigger value="gm">GRAND MENAGE</TabsTrigger>
-            <TabsTrigger value="nv">NETTOYAGE DE VITRE</TabsTrigger>
-            <TabsTrigger value="nat">NETTOYAGE APRÈS TRAVAUX</TabsTrigger>
+            <TabsTrigger value="gm">
+              {width > 768 ? "GRAND MENAGE" : "GRAND MENAGE"}
+            </TabsTrigger>
+            <TabsTrigger value="nv">
+              {width > 768 ? "NETTOYAGE DE VITRE" : "DE VITRE"}
+            </TabsTrigger>
+            <TabsTrigger value="nat">
+              {width > 768 ? "NETTOYAGE APRÈS TRAVAUX" : "APRÈS TRAVAUX"}
+            </TabsTrigger>
           </TabsList>
 
           <TabsContent
@@ -165,7 +177,6 @@ const Services = () => {
                 <h1 className="text-center font-sans text-3xl uppercase text-primaryColor">
                   Grand menage
                 </h1>
-                <div className="w-12 border-b-4 border-secondaryColor"></div>
               </div>
               <p className="text-center">
                 Service de Grand Ménage Résidentiel De temps en temps, il est
@@ -203,7 +214,6 @@ const Services = () => {
                 <h1 className="text-center font-sans text-3xl uppercase text-primaryColor">
                   NETTOYAGE DE VITRE
                 </h1>
-                <div className="w-12 border-b-4 border-secondaryColor"></div>
               </div>
               <p className="text-center">
                 Service de Nettoyage de Vitres avec Estimation Gratuite Réservez
@@ -247,7 +257,6 @@ const Services = () => {
                 <h1 className="text-center font-sans text-3xl text-primaryColor">
                   NETTOYAGE APRÈS TRAVAUX
                 </h1>
-                <div className="w-12 border-b-4 border-secondaryColor"></div>
               </div>
               <p className="text-center">
                 Félicitations ! Vous êtes sur le point de bénéficier d&apos;un

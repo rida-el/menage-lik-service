@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import nav from "~/data/nav.json";
 import { Button } from "../ui/button";
 import { MenuIcon, XIcon } from "lucide-react";
+import { cn } from "~/lib/utils";
 
 function Nav() {
   // next.js router
@@ -15,16 +16,25 @@ function Nav() {
 
   // get menu open global state
   const [menuOpen, setMenuOpen] = useRecoilState(menuState);
+  const { scroll } = useRecoilValue(windowState);
 
   if (width > 768) {
     return (
       <div className="flex items-center justify-center">
-        <ul className="nav flex items-center gap-6 text-lg  text-gray-500">
+        <ul
+          className={cn(
+            "nav flex items-center gap-6 text-base font-medium ",
+            scroll > 20 ? "text-primaryColor" : "text-white",
+          )}
+        >
           {nav.map((item, i) => (
             <li
-              className={
-                router.pathname === item.url ? "text-primaryColor" : ""
-              }
+              className={cn(
+                "uppercase",
+                router.pathname === item.url
+                  ? "text-secondaryColor"
+                  : "transition-all duration-300 ease-in-out hover:text-secondaryColor",
+              )}
               key={i}
             >
               <Link href={item.url}>
