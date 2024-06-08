@@ -4,10 +4,10 @@ import { Button } from "~/components/ui/button";
 
 const About = () => {
   return (
-    <div className="relative min-h-[calc(100vh-12rem)] h-full w-screen ">
+    <div className="relative h-full min-h-[calc(100vh-12rem)] w-screen ">
       <section id="about" className="h-full">
         <div className="container mx-auto h-full md:py-20">
-          <div className="flex h-full items-center justify-center gap-12 flex-col-reverse md:flex-row">
+          <div className="flex h-full flex-col-reverse items-center justify-center gap-12 md:flex-row">
             <div className="relative mt-10 md:mt-0">
               <Image
                 src="/assets/about.png"
@@ -18,7 +18,7 @@ const About = () => {
               />
               <div className="absolute top-0 z-20 h-full w-full rounded-md bg-black/50"></div>
             </div>
-            <div className="mt-24 flex h-full w-full max-w-lg flex-col justify-start gap-12">
+            <div className="flex h-full w-full max-w-lg flex-col justify-start gap-12">
               <div className="flex flex-col gap-2">
                 <h2 className="text-md text-slate-400">Service au prix fixe</h2>
                 <div className="flex items-center gap-2">

@@ -6,7 +6,6 @@ import nav from "~/data/nav.json";
 import { Button } from "../ui/button";
 import { MenuIcon, XIcon } from "lucide-react";
 
-
 function Nav() {
   // next.js router
   const router = useRouter();
@@ -23,7 +22,9 @@ function Nav() {
         <ul className="nav flex items-center gap-6 text-lg  text-gray-500">
           {nav.map((item, i) => (
             <li
-              className={router.pathname === item.url ? "text-primaryColor" : ""}
+              className={
+                router.pathname === item.url ? "text-primaryColor" : ""
+              }
               key={i}
             >
               <Link href={item.url}>
@@ -32,14 +33,14 @@ function Nav() {
             </li>
           ))}
         </ul>
-       
       </div>
     );
   }
   return (
-    <div className="Header-ham-menu" onClick={() => setMenuOpen(!menuOpen)}>
-      {menuOpen ? <MenuIcon /> : <XIcon />}
-    </div>
+    <div
+      className="Header-ham-menu"
+      onClick={() => setMenuOpen(!menuOpen)}
+    ></div>
   );
 }
 
