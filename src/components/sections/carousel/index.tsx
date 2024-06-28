@@ -10,13 +10,13 @@ import {
 
 const CarouselSection = () => {
   return (
-    <section className="container flex flex-col items-center justify-center gap-12 px-4 py-16">
-      <div className="flex w-full flex-col items-center justify-center gap-2 px-4 py-16">
+    <section className="container flex flex-col items-center justify-center gap-12 px-4 py-16" id="services">
+      <div className="flex w-full flex-col items-start justify-center gap-2 px-4 py-2 md:items-center">
         <h2 className="text-left text-3xl font-semibold text-primaryColor md:text-4xl">
           Nos services
         </h2>
         <div className="w-12 border-4 border-secondaryColor font-medium text-secondaryColor"></div>
-        <p className="w-full text-center md:max-w-[70%]">
+        <p className="w-full text-start md:max-w-[70%] md:text-center">
           Tout bâtiment. Toute industrie. À toute heure. Un environnement propre
           et sain est essentiel pour toutes les entreprises et installations,
           quel que soit le secteur. Maintenant plus que jamais, des méthodes de
@@ -68,27 +68,27 @@ const CarouselSection = () => {
 const data = [
   {
     title: "SERVICES DE NETTOYAGE HÔTELIER",
-    image: "/assets/services/1.jpg",
+    image: "/assets/services/sv6.jpeg",
   },
   {
     title: "SERVICES DE NETTOYAGE INDUSTRIEL",
-    image: "/assets/services/2.jpeg",
+    image: "/assets/services/sv4.jpeg",
   },
   {
     title: "SERVICES DE NETTOYAGE DES ÉTABLISSEMENTS D'ENSEIGNEMENT",
-    image: "/assets/services/3.jpeg",
+    image: "/assets/services/sv5.jpeg",
   },
   {
     title: "NETTOYAGE DE BUREAUX",
-    image: "/assets/services/5.jpeg",
+    image: "/assets/services/sv1.jpeg",
   },
   {
     title: "NETTOYAGE SECTEUR DE LA SANTÉ",
-    image: "/assets/services/6.jpeg",
+    image: "/assets/services/sv2.jpeg",
   },
   {
     title: "SERVICES DE NETTOYAGE COMMERCIAL",
-    image: "/assets/services/7.jpeg",
+    image: "/assets/services/sv3.jpeg",
   },
 ];
 

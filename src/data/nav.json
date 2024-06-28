@@ -4,7 +4,7 @@
 		"url": "/"
 	},
 	{
-		"name": "Qui somme nous",
+		"name": "À propos de nous",
 		"url": "#nous"
 	},
 	{
@@ -12,7 +12,7 @@
 		"url": "#services"
 	},
   {
-		"name": "Contact",
+		"name": "Réserver",
 		"url": "#contact"
   }
 ]

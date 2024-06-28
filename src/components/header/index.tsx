@@ -10,9 +10,9 @@ function Header() {
   const { scroll } = useRecoilValue(windowState);
   return (
     <div
-      className={`fixed z-50 flex h-20 w-full items-center justify-between bg-transparent  transition-all duration-1000 ease-in-out ${scroll > 20 ? "h-[70px] !bg-white/90 !text-primaryColor transition-all duration-300" : ""} `}
+      className={`fixed z-50 flex h-20 w-full items-center justify-between transition-all duration-1000 bg-black/5 ease-in-out ${scroll > 20 ? "h-[70px] !bg-white/90 !text-primaryColor transition-all duration-300" : ""} `}
     >
-      <div className="container flex w-full items-center justify-between gap-4">
+      <div className="container flex w-full items-center justify-between ">
         <Logo />
         <Nav />
         <div className="Header-nav-CallToAction ">

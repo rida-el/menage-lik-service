@@ -62,7 +62,7 @@ const Feedbacks = () => {
             ))}
           </CarouselContent>
           <div className="absolute top-1/2 hidden -translate-x-8 -translate-y-4 flex-col  items-center justify-center gap-0 md:flex">
-            <CarouselPrevious className="border border-primaryColor bg-secondaryColor" />
+            <CarouselPrevious className="felx items-center justify-center border border-primaryColor bg-secondaryColor" />
             <CarouselNext className="border border-primaryColor bg-secondaryColor" />
           </div>
         </Carousel>
@@ -84,7 +84,7 @@ const Feedbacks = () => {
           une relation client exceptionnelle.
         </p>
       </div>
-      <div className="h-8"></div>
+      {/* <div className="h-8"></div> */}
     </section>
   );
 };

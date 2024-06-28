@@ -12,13 +12,14 @@ const Services = () => {
   const [checked2, setChecked2] = useState(false);
   const { width } = useRecoilValue(windowState);
 
-  const [value, setValue] = useState("spn");
+  const [value, setValue] = useState("gm");
   // Define handleCheckedChange within the component scope
 
   const handleCheckedChange = (newChecked: boolean) => {
+    // if (checked) setValue("gm");
+    // else setValue("spn");
     setChecked(newChecked);
-    if (value === "gm" && !checked) setValue("spn");
-    else setValue("gm");
+    
   };
 
   return (
@@ -27,8 +28,8 @@ const Services = () => {
       id="contact"
     >
       <div className="flex flex-col items-center justify-center gap-3">
-        <h1 className="text-center text-3xl uppercase font-semibold text-primaryColor md:text-4xl">
-          Question et réponse
+        <h1 className="w-full text-center text-3xl font-semibold text-primaryColor md:text-4xl">
+          Contactez-Nous
         </h1>
         <div className="w-12 border-4 border-secondaryColor font-medium text-secondaryColor"></div>
 
@@ -55,7 +56,7 @@ const Services = () => {
         <Tabs
           defaultChecked
           defaultValue="gm"
-          className="mt-6 h-full overflow-y-scroll"
+          className="h-full overflow-y-scroll"
         >
           <TabsList className="grid w-full grid-cols-2 gap-2 rounded-none border-b border-primaryColor bg-white px-8">
             <TabsTrigger value="gm" className="break-words uppercase">
@@ -73,7 +74,7 @@ const Services = () => {
           >
             <div className="flex flex-col items-center gap-3">
               <div className="flex flex-col items-center">
-                <h1 className="text-center font-sans text-3xl uppercase text-primaryColor">
+                <h1 className="text-center font-sans text-2xl uppercase text-primaryColor">
                   Service Professionnel de Nettoyage
                 </h1>
               </div>
@@ -116,7 +117,7 @@ const Services = () => {
           >
             <div className="flex flex-col items-center gap-3">
               <div className="flex flex-col items-center">
-                <h1 className="text-center font-sans text-3xl uppercase text-primaryColor">
+                <h1 className="text-center font-sans text-2xl uppercase text-primaryColor">
                   Réservation par Visite des Lieux
                 </h1>
               </div>
@@ -174,7 +175,7 @@ const Services = () => {
           >
             <div className="flex flex-col items-center gap-3">
               <div className="flex flex-col items-center">
-                <h1 className="text-center font-sans text-3xl uppercase text-primaryColor">
+                <h1 className="text-center font-sans text-2xl uppercase text-primaryColor">
                   Grand menage
                 </h1>
               </div>
@@ -211,7 +212,7 @@ const Services = () => {
           >
             <div className="flex flex-col items-center gap-3">
               <div className="flex flex-col items-center">
-                <h1 className="text-center font-sans text-3xl uppercase text-primaryColor">
+                <h1 className="text-center font-sans text-2xl uppercase text-primaryColor">
                   NETTOYAGE DE VITRE
                 </h1>
               </div>
@@ -254,7 +255,7 @@ const Services = () => {
           >
             <div className="flex flex-col items-center gap-3">
               <div className="flex flex-col items-center">
-                <h1 className="text-center font-sans text-3xl text-primaryColor">
+                <h1 className="text-center font-sans text-2xl text-primaryColor">
                   NETTOYAGE APRÈS TRAVAUX
                 </h1>
               </div>

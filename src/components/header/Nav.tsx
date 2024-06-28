@@ -30,7 +30,7 @@ function Nav() {
           {nav.map((item, i) => (
             <li
               className={cn(
-                "uppercase",
+                "uppercase text-md ",
                 router.pathname === item.url
                   ? "text-secondaryColor"
                   : "transition-all duration-300 ease-in-out hover:text-secondaryColor",

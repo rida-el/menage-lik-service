@@ -25,13 +25,13 @@ const Comment = () => {
       >
         <div className="container mx-auto flex h-full flex-col justify-between gap-12 md:py-20">
           <div className="flex h-fit w-full flex-col items-center justify-center gap-6 text-center">
-            <div className="flex flex-col items-center justify-center gap-1">
-              <h2 className="text-left text-3xl font-semibold text-primaryColor md:text-4xl py-2">
+            <div className="flex flex-col items-start justify-center gap-1 md:items-center">
+            <h1 className="w-full text-left text-3xl font-semibold text-primaryColor md:text-4xl">
                 Comment ça fonctionne
-              </h2>
+              </h1>
               <div className="w-12 border-4 border-secondaryColor font-medium text-secondaryColor"></div>
             </div>
-            <p className="max-w-xl pb-4">
+            <p className="max-w-xl pb-4 text-start md:text-center">
               Nous nettoyons votre maison, bureau et tous vous espaces toutes
               les semaines, toutes les deux semaines ou toutes les trois
               semaines.
@@ -39,13 +39,13 @@ const Comment = () => {
           </div>
         </div>
       </section>
-      <div className="container flex h-full items-center justify-center gap-10 md:flex-row flex-col">
+      <div className="container flex py-2 flex-col items-center justify-center gap-10 md:flex-row ">
         {data.map((item, index) => (
-          <Card className="relative w-[350px] text-center" key={index}>
+          <Card className="relative w-[350px]  h-[200px] text-center" key={index}>
             <CardHeader className="">
-              <CardTitle>{item.title}</CardTitle>
             </CardHeader>
-            <CardContent className="rounded-md shadow-[12px_12px_0px_0px_rgba(235,209,15)] ">
+            <CardContent className="rounded-md flex flex-col gap-4 h-full">
+            <CardTitle>{item.title}</CardTitle>
               <p>{item.description}</p>
               <p className="absolute top-0 text-[9rem] font-black opacity-5">
                 {index + 1}

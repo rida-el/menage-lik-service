@@ -6,7 +6,7 @@ import { Button } from "~/components/ui/button";
 
 const Footer = () => {
   return (
-    <div className="flex h-full w-screen items-center  justify-between border-t border-primaryColor bg-primaryColorLight py-4">
+    <div className="flex h-fit w-screen items-center justify-between border-t  bg-gray-50 py-4">
       <div className="container flex flex-col items-start justify-between gap-2 md:flex-row md:items-center">
         <div className="flex flex-col gap-6">
           <div>
