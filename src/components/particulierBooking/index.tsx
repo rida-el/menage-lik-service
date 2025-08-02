@@ -28,7 +28,7 @@ import {
 } from "../ui/select";
 import { Textarea } from "../ui/textarea";
 import { Switch } from "../ui/switch";
-import { Anvil, CalendarIcon, PawPrint } from "lucide-react";
+import { Anvil, CalendarIcon, PawPrint, Loader2 } from "lucide-react";
 import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover";
 import { Calendar } from "../ui/calendar";
 import { cn } from "~/lib/utils";
@@ -62,6 +62,7 @@ export function ParticulierBooking({
   const [checked, setChecked] = useState(false);
   const [checked2, setChecked2] = useState(false);
   const [date, setDate] = useState<Date>();
+  const [isLoading, setIsLoading] = useState(false); // Add loading state
 
   const notify = () =>
     toast.success("Success, Merci nous vous appellerons bientôt", {
@@ -91,6 +92,9 @@ export function ParticulierBooking({
   });
 
   const onSubmit: SubmitHandler<FormData> = (data) => {
+    // Set loading to true when starting submission
+    setIsLoading(true);
+
     // Add the date and switch values to the form data
     const formData = {
       ...data,
@@ -117,7 +121,7 @@ export function ParticulierBooking({
       type: formData.type ?? "",
     };
 
-    // Uncomment when ready to send emails
+    // Send email with EmailJS
     emailjs
       .send(
         "service_r7r7ff8",
@@ -147,7 +151,11 @@ export function ParticulierBooking({
             theme: "light",
           });
         },
-      );
+      )
+      .finally(() => {
+        // Set loading to false when submission is complete (success or error)
+        setIsLoading(false);
+      });
   };
 
   return (
@@ -460,9 +468,17 @@ export function ParticulierBooking({
                   <div className="mt-2 flex w-full cursor-pointer items-start justify-start">
                     <Button
                       type="submit"
-                      className="w-full py-6  text-lg md:w-1/2"
+                      disabled={isLoading}
+                      className="w-full py-6 text-lg md:w-1/2"
                     >
-                      Envoyer
+                      {isLoading ? (
+                        <>
+                          <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                          Envoi en cours...
+                        </>
+                      ) : (
+                        "Envoyer"
+                      )}
                     </Button>
                   </div>
                 </form>
