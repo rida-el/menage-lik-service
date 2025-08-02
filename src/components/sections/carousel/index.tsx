@@ -10,7 +10,10 @@ import {
 
 const CarouselSection = () => {
   return (
-    <section className="container flex flex-col items-center justify-center gap-12 px-4 py-16" id="services">
+    <section
+      className="container flex flex-col items-center justify-center gap-12 px-4 py-16"
+      id="services"
+    >
       <div className="flex w-full flex-col items-start justify-center gap-2 px-4 py-2 md:items-center">
         <h2 className="text-left text-3xl font-semibold text-primaryColor md:text-4xl">
           Nos services
@@ -57,9 +60,8 @@ const CarouselSection = () => {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <></>
-        <CarouselPrevious className="hidden md:block" />
-        <CarouselNext className="hidden md:block" />
+        <CarouselPrevious className="hidden items-center justify-center md:flex" />
+        <CarouselNext className="hidden items-center justify-center md:flex" />
       </Carousel>
     </section>
   );

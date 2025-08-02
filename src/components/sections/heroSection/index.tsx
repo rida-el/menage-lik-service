@@ -5,7 +5,7 @@ import { Button } from "~/components/ui/button";
 const HeroSection = () => {
   return (
     <div className="h-screen w-screen bg-[url('/assets/services/1.jpg')] bg-cover bg-left md:bg-[url('/assets/bg.png')]">
-      <div className="absolute h-full w-full bg-opacity-65 bg-gradient-to-t from-primaryColor to-black/50"></div>
+      <div className="absolute h-full w-full bg-black/60"></div>
       <div className="flex h-full w-full items-center justify-center ">
         <div className="relative z-20 flex  flex-col items-center justify-center gap-6 bg-white/65 p-4">
           <h1 className="text-center text-2xl font-bold text-primaryColor md:text-4xl">

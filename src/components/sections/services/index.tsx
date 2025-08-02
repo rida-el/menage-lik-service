@@ -19,7 +19,6 @@ const Services = () => {
     // if (checked) setValue("gm");
     // else setValue("spn");
     setChecked(newChecked);
-    
   };
 
   return (
@@ -78,27 +77,16 @@ const Services = () => {
                   Service Professionnel de Nettoyage
                 </h1>
               </div>
-              <p className="text-center">
-                Service Professionnel de Nettoyage - Réservation par Visite des
-                Lieux Nous offrons un service professionnel de nettoyage adapté
-                à vos besoins spécifiques. Notre approche commence par une
-                évaluation minutieuse de vos locaux pour garantir une prestation
-                sur mesure et de qualité supérieure. Lorsque vous prenez
-                rendez-vous avec nous, notre équipe expérimentée se déplace sur
-                les lieux pour effectuer une inspection approfondie. Cette
-                visite nous permet de comprendre vos exigences en matière de
-                nettoyage et de déterminer les meilleures solutions pour
-                répondre à vos attentes. Notre processus de réservation par
-                visite des lieux garantit une planification précise et une
-                prestation de service optimale. Vous pouvez être assuré que
-                chaque aspect de vos locaux sera pris en compte pour assurer un
-                nettoyage complet et efficace. Faites confiance à notre équipe
-                professionnelle pour vous fournir un environnement propre et
-                impeccable. Contactez-nous dès aujourd&apos;hui pour planifier
-                votre visite des lieux et bénéficier de notre expertise en
-                matière de nettoyage professionnel.
+              <p>
+                Profitez d&apos;un nettoyage professionnel sur mesure,
+                parfaitement adapté à vos besoins. Notre équipe se déplace pour
+                une inspection gratuite de vos locaux, garantissant un service
+                optimisé et de qualité supérieure. Chaque détail est pris en
+                compte pour vous offrir un espace propre et impeccable. Réservez
+                dès maintenant et faites confiance à notre expertise pour un
+                environnement sain et agréable !
               </p>
-              <ParticulierBooking>
+              <ParticulierBooking type="Professionnel de Nettoyage">
                 <Button
                   variant="outline"
                   className="mt-6 rounded-md bg-secondaryColor text-primaryColor hover:scale-105 hover:border-secondaryColor"
@@ -121,27 +109,16 @@ const Services = () => {
                   Réservation par Visite des Lieux
                 </h1>
               </div>
-              <p className="text-center">
-                Service Professionnel de Nettoyage - Réservation par Visite des
-                Lieux Nous offrons un service professionnel de nettoyage adapté
-                à vos besoins spécifiques. Notre approche commence par une
-                évaluation minutieuse de vos locaux pour garantir une prestation
-                sur mesure et de qualité supérieure. Lorsque vous prenez
-                rendez-vous avec nous, notre équipe expérimentée se déplace sur
-                les lieux pour effectuer une inspection approfondie. Cette
-                visite nous permet de comprendre vos exigences en matière de
-                nettoyage et de déterminer les meilleures solutions pour
-                répondre à vos attentes. Notre processus de réservation par
-                visite des lieux garantit une planification précise et une
-                prestation de service optimale. Vous pouvez être assuré que
-                chaque aspect de vos locaux sera pris en compte pour assurer un
-                nettoyage complet et efficace. Faites confiance à notre équipe
-                professionnelle pour vous fournir un environnement propre et
-                impeccable. Contactez-nous dès aujourd&apos;hui pour planifier
-                votre visite des lieux et bénéficier de notre expertise en
-                matière de nettoyage professionnel.
+              <p>
+                Profitez d&apos;un nettoyage professionnel sur mesure,
+                parfaitement adapté à vos besoins. Notre équipe se déplace pour
+                une inspection gratuite de vos locaux, garantissant un service
+                optimisé et de qualité supérieure. Chaque détail est pris en
+                compte pour vous offrir un espace propre et impeccable. Réservez
+                dès maintenant et faites confiance à notre expertise pour un
+                environnement sain et agréable !
               </p>
-              <ParticulierBooking>
+              <ParticulierBooking type="Visite des Lieux">
                 <Button
                   variant="outline"
                   className="mt-6 rounded-md bg-secondaryColor text-primaryColor hover:scale-105 hover:border-secondaryColor"
@@ -174,25 +151,23 @@ const Services = () => {
             className=" border border-t-0 border-primaryColor px-6 py-10"
           >
             <div className="flex flex-col items-center gap-3">
-              <div className="flex flex-col items-center">
-                <h1 className="text-center font-sans text-2xl uppercase text-primaryColor">
+              <div className="flex flex-col ">
+                <h1 className=" font-sans text-2xl uppercase text-primaryColor">
                   Grand menage
                 </h1>
               </div>
-              <p className="text-center">
-                Service de Grand Ménage Résidentiel De temps en temps, il est
-                nécessaire d&apos;effectuer un grand ménage en profondeur de
-                votre maison pour atteindre les zones souvent négligées. Notre
-                service se distingue par une attention particulière aux détails,
-                assurant ainsi une apparence impeccable à votre domicile. Nos
-                prestations comprennent le nettoyage des murs, des plafonds, des
-                fenêtres, des luminaires, des meubles en bois, des ventilateurs
-                de plafond, ainsi que le nettoyage sous les meubles, des
-                miroirs, des sols, des appareils ménagers et des placards de
-                cuisine. Nos techniciens s&apos;engagent à fournir un service de
-                qualité, respectant nos valeurs fondamentales telles que
+              <p>
+                Votre maison mérite ce qu&apos;il y a de mieux ! Avec notre
+                service de grand ménage en profondeur, transformez votre
+                intérieur en un espace impeccable et rafraîchi. Nous mettons un
+                point d&apos;honneur à nettoyer les moindres recoins souvent
+                négligés, du plafond au sol, pour un résultat étincelant. Nos
+                prestations incluent un nettoyage minutieux des murs, plafonds,
+                fenêtres, luminaires, meubles en bois, ventilateurs de plafond,
+                ainsi que des espaces sous les meubles, des miroirs, des sols,
+                des appareils électroménagers et des placards de cuisine.
               </p>
-              <ParticulierBooking buttons={true}>
+              <ParticulierBooking buttons={true} type="Grand Ménage">
                 <Button
                   variant="outline"
                   className="mt-6 rounded-md bg-secondaryColor text-primaryColor hover:scale-105 hover:border-secondaryColor"
@@ -200,6 +175,7 @@ const Services = () => {
                   Réserver maintenant
                 </Button>
               </ParticulierBooking>
+
               <div className="container relative h-[30rem] border-2 border-secondaryColor bg-[url(/assets/gm.jpg)] bg-cover bg-center bg-no-repeat object-cover">
                 <div className="absolute right-0 top-0 h-full w-full bg-black/30"></div>
               </div>
@@ -216,26 +192,16 @@ const Services = () => {
                   NETTOYAGE DE VITRE
                 </h1>
               </div>
-              <p className="text-center">
-                Service de Nettoyage de Vitres avec Estimation Gratuite Réservez
-                dès maintenant un spécialiste pour le lavage complet de vos
-                vitres, à la fois intérieur et extérieur. Nous assurons
-                également l&apos;aspiration dans les rails des fenêtres, le
-                nettoyage des cadrages et l&apos;élimination des nids
-                d&apos;araignées, ainsi que le nettoyage du moustiquaire, le
-                tout effectué avec des outils professionnels adaptés aux travaux
-                en hauteur. Vous pouvez avoir confiance en nos professionnels
-                qui sont soigneusement sélectionnés et vérifiés avant chaque
-                intervention. Notre processus de réservation est simple,
-                abordable, rapide et sécurisé. De plus, vous avez la liberté de
-                modifier ou d&apos;annuler votre réservation à tout moment, sans
-                engagement. Personnalisez votre prestation selon vos besoins
-                spécifiques et bénéficiez d&apos;un suivi attentif de votre
-                réservation. Nous nous engageons à fournir des services de
-                qualité, avec des professionnels expérimentés, évalués après
-                chaque séance pour assurer votre satisfaction totale.
+              <p>
+                Redonnez à vos vitres leur éclat d&apos;origine avec notre
+                service de nettoyage professionnel, à l&apos;intérieur comme à
+                l&apos;extérieur. Nos experts assurent un nettoyage complet :
+                aspiration des rails de fenêtres, entretien des cadrages,
+                élimination des toiles d&apos;araignées et nettoyage des
+                moustiquaires, le tout réalisé avec des équipements spécialisés,
+                même pour les travaux en hauteur.
               </p>
-              <ParticulierBooking>
+              <ParticulierBooking type="nettoyage de vitre">
                 <Button
                   variant="outline"
                   className="mt-6 rounded-md bg-secondaryColor text-primaryColor hover:scale-105 hover:border-secondaryColor"
@@ -254,34 +220,23 @@ const Services = () => {
             className=" border border-t-0 border-primaryColor px-6 py-10"
           >
             <div className="flex flex-col items-center gap-3">
-              <div className="flex flex-col items-center">
+              <div className="flex flex-col ">
                 <h1 className="text-center font-sans text-2xl text-primaryColor">
                   NETTOYAGE APRÈS TRAVAUX
                 </h1>
               </div>
-              <p className="text-center">
-                Félicitations ! Vous êtes sur le point de bénéficier d&apos;un
-                espace parfaitement nettoyé, sans traces. Pour ceux qui estiment
-                que le nettoyage après travaux est un luxe, nos tarifs
-                abordables rendent ce service accessible à tous. Nos services
-                spécialiste s&apos;engagent à traiter vous et vos matériaux avec
-                le plus haut niveau de qualité. Nos services incluent:
-                *Personnel de confiance. *Réservation facile, abordable, rapide
-                et sécurisé. *Liberté de modifier ou d&apos;annuler votre
-                réservation a tout moment, sans engagement. Possibilité de
-                choisir vos techniciens favoris. Suivi attentif de votre
-                réservation. Technicien expérimenté, vérifier avant chaque
-                intervention et évalués après chaque séance. Nos techniciens
-                adhérents à notre engagement simple: Offrir un service de
-                qualité répondant aux attentes de nos clients. Afin de rendre
-                les corvées ménagère un lointain souvenir. Ils s&apos;engagent
-                également à respecter nos 6 valeurs fondamentales: * Intégrité *
-                Courtoisie * Fiabilité * discrétion * autonomie * ponctualité
+              <p>
+                Vous êtes à quelques pas de profiter d&apos;un nettoyage
+                irréprochable, sans la moindre trace. Si vous pensiez que le
+                nettoyage après travaux était un luxe, détrompez-vous ! Nos
+                tarifs compétitifs rendent ce service accessible à tous. Nous
+                nous engageons à traiter votre espace et vos matériaux avec le
+                plus haut niveau de soin et de qualité.
               </p>
-              <ParticulierBooking>
+              <ParticulierBooking type="nettoyage après travaux">
                 <Button
                   variant="outline"
-                  className="mt-6 rounded-md bg-secondaryColor text-primaryColor hover:scale-105 hover:border-secondaryColor"
+                  className="mt-6 rounded-md bg-secondaryColor text-primaryColor hover:scale-105 hover:border-secondaryColor "
                 >
                   Réserver maintenant
                 </Button>

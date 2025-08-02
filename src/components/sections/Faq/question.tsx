@@ -1,4 +1,5 @@
 import { BiChevronDown } from "react-icons/bi";
+import { cn } from "~/lib/utils";
 
 interface QuestionProps {
   question: {
@@ -10,12 +11,7 @@ interface QuestionProps {
   index: number;
 }
 
-function Question({
-  question,
-  expanded,
-  setExpanded,
-  index,
-}: QuestionProps) {
+function Question({ question, expanded, setExpanded, index }: QuestionProps) {
   return (
     <div
       className={`duration-600 ease-cubic-bezier(.59,0,.06,1) w-full rounded-lg border bg-gray-50 transition-all ${
@@ -27,7 +23,7 @@ function Question({
         onClick={() => setExpanded(expanded ? -1 : index)}
       >
         <p
-          className={`font-bold text-gray-900 ${
+          className={`text-xl font-bold text-gray-900 ${
             expanded
               ? "visible h-auto translate-y-0 transform opacity-100 "
               : ""
@@ -35,15 +31,15 @@ function Question({
         >
           {question.question}
         </p>
-        <span className={expanded ? "rotate-180" : ""}>
+        <span className={cn("bg-secondaryColor rounded-full p-1", expanded ? "rotate-180 " : "")}>
           <BiChevronDown />
         </span>
       </div>
       <div className={`w-full ${expanded ? "px-5" : ""}`}>
         <p
-          className={` ${
+          className={`text-gray-600 ${
             expanded
-              ? "visible h-auto translate-y-0 transform opacity-100"
+              ? "visible h-auto translate-y-0 transform opacity-100 "
               : "invisible h-0 font-medium opacity-0 "
           }`}
         >

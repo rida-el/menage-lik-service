@@ -13,7 +13,7 @@ const AboutUs = () => {
         <div className="w-12 border-4 border-secondaryColor font-medium text-secondaryColor"></div>
       </div>
       <div className="h-8"></div>
-      <div className="grid w-full grid-cols-1 justify-between rounded-t-md border border-primaryColor md:grid-cols-3 lg:grid-cols-5">
+      <div className="grid w-full grid-cols-1 justify-between overflow-hidden rounded-t-md border border-primaryColor md:grid-cols-3 lg:grid-cols-5">
         {data.map((item, index) => (
           <>
             <div
@@ -38,7 +38,7 @@ const AboutUs = () => {
           </>
         ))}
       </div>
-      <div className=" hidden md:grid w-full md:grid-cols-3 lg:grid-cols-5 flex-nowrap justify-between rounded-b-md border border-t-0 border-primaryColor ">
+      <div className="hidden w-full flex-nowrap justify-between overflow-hidden rounded-b-md border border-t-0 border-primaryColor md:grid md:grid-cols-3 lg:grid-cols-5 ">
         {data.map((item, index) => (
           <>
             <div
