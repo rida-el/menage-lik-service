@@ -86,7 +86,7 @@ export function ParticulierBooking({
       nb: "1",
       hasAnimals: false,
       needsTools: false,
-      type: type || "",
+      type: type ?? "",
     },
   });
 
@@ -97,7 +97,7 @@ export function ParticulierBooking({
       date: date,
       hasAnimals: checked,
       needsTools: checked2,
-      type: type || data.type || "",
+      type: type ?? data.type ?? "",
     };
 
     console.log("Form Data:", formData);
@@ -113,8 +113,8 @@ export function ParticulierBooking({
       date: date ? format(date, "PPP") : "Non spécifiée",
       hasAnimals: checked ? "Oui" : "Non",
       needsTools: checked2 ? "Oui" : "Non",
-      message: formData.message || "Aucun message spécifique",
-      type: formData.type || "",
+      message: formData.message ?? "Aucun message spécifique",
+      type: formData.type ?? "",
     };
 
     // Uncomment when ready to send emails
@@ -177,7 +177,7 @@ export function ParticulierBooking({
                   <input
                     type="hidden"
                     {...register("type")}
-                    value={type || ""}
+                    value={type ?? ""}
                   />
                   <div className="field padding-bottom--24 border bg-gray-100 p-2">
                     <Label htmlFor="name">Nom Complète*</Label>
@@ -362,7 +362,7 @@ export function ParticulierBooking({
                           )}
                         />
                         <p className="error-message text-red-400">
-                          {errors.place && errors.place.message}
+                          {errors.place?.message}
                         </p>
                       </div>
 
@@ -395,7 +395,7 @@ export function ParticulierBooking({
                           )}
                         />
                         <p className="error-message text-red-400">
-                          {errors.nb && errors.nb.message}
+                          {errors.nb?.message}
                         </p>
                       </div>
                     </div>
@@ -434,7 +434,7 @@ export function ParticulierBooking({
                               onSelect={(selectedDate) => {
                                 setDate(selectedDate);
                                 field.onChange(selectedDate);
-                                setValue("date", selectedDate || new Date());
+                                setValue("date", selectedDate ?? new Date());
                               }}
                               initialFocus
                             />
@@ -443,7 +443,7 @@ export function ParticulierBooking({
                       )}
                     />
                     <p className="error-message text-red-400">
-                      {errors.date && errors.date.message}
+                      {errors.date?.message}
                     </p>
                   </div>
 
