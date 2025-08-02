@@ -4,10 +4,27 @@ import { Button } from "~/components/ui/button";
 
 const HeroSection = () => {
   return (
-    <div className="h-screen w-screen bg-[url('/assets/services/1.jpg')] bg-cover bg-left md:bg-[url('/assets/bg.png')]">
-      <div className="absolute h-full w-full bg-black/60"></div>
-      <div className="flex h-full w-full items-center justify-center ">
-        <div className="relative z-20 flex  flex-col items-center justify-center gap-6 bg-white/65 p-4">
+    <div className="relative h-screen w-screen overflow-hidden">
+      {/* Background Video */}
+      <video
+        className="absolute left-0 top-0 h-full w-full object-cover"
+        autoPlay
+        muted
+        loop
+        playsInline
+      >
+        <source src="/assets/hero-video.mp4" type="video/mp4" />
+        <source src="/assets/hero-video.webm" type="video/webm" />
+        {/* Fallback image if video doesn't load */}
+        <div className="absolute left-0 top-0 h-full w-full bg-[url('/assets/services/1.jpg')] bg-cover bg-left md:bg-[url('/assets/bg.png')]"></div>
+      </video>
+
+      {/* Dark overlay */}
+      <div className="absolute z-10 h-full w-full bg-black/60"></div>
+
+      {/* Content */}
+      <div className="relative z-20 flex h-full w-full items-center justify-center">
+        <div className="flex flex-col items-center justify-center gap-6 bg-white/65 p-4">
           <h1 className="text-center text-2xl font-bold text-primaryColor md:text-4xl">
             Prenez du temps pour vous !
             <br />

@@ -1,5 +1,4 @@
 import { BadgeDollarSign, CalendarRange } from "lucide-react";
-import Image from "next/image";
 import { Button } from "~/components/ui/button";
 import Link from "next/link";
 
@@ -10,13 +9,20 @@ const About = () => {
         <div className="container mx-auto h-full md:py-14">
           <div className="flex h-full flex-col-reverse items-center justify-center gap-8 md:flex-row">
             <div className="relative mt-6 md:mt-0">
-              <Image
-                src="/assets/about.png"
-                alt="About"
-                className="rounded-md shadow-[12px_12px_0px_0px_rgba(235,209,15)]"
+              <video
+                className="h-[500px] w-[350px] rounded-md object-cover shadow-[12px_12px_0px_0px_rgba(235,209,15)]"
                 width={350}
                 height={330}
-              />
+                controls
+                autoPlay
+                muted
+                loop
+                playsInline
+              >
+                <source src="/assets/video.mp4" type="video/mp4" />
+                <source src="/assets/video.webm" type="video/webm" />
+                Your browser does not support the video tag.
+              </video>
               <div className="absolute top-0 z-20 h-full w-full rounded-md bg-black/50"></div>
             </div>
             <div className="flex h-full w-full max-w-lg flex-col justify-start gap-6 ">
