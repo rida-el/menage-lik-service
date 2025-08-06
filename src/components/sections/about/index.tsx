@@ -19,8 +19,8 @@ const About = () => {
                 loop
                 playsInline
               >
-                <source src="/assets/video.mp4" type="video/mp4" />
-                <source src="/assets/video.webm" type="video/webm" />
+                <source src="/video.mp4" type="video/mp4" />
+                <source src="/video.webm" type="video/webm" />
                 Your browser does not support the video tag.
               </video>
               <div className="absolute top-0 z-20 h-full w-full rounded-md bg-black/50"></div>
