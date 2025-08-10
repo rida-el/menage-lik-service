@@ -22,7 +22,7 @@ const config = {
   async headers() {
     return [
       {
-        source: "/(.*\\.mp4)",
+        source: "/(.*)\\.mp4",
         headers: [
           {
             key: "Content-Type",
@@ -35,7 +35,7 @@ const config = {
         ],
       },
       {
-        source: "/(.*\\.webm)",
+        source: "/(.*)\\.webm",
         headers: [
           {
             key: "Content-Type",
