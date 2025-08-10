@@ -17,38 +17,6 @@ const config = {
     locales: ["en"],
     defaultLocale: "en",
   },
-
-  // Add headers for video files to ensure proper MIME types
-  async headers() {
-    return [
-      {
-        source: "/(.*)\\.mp4",
-        headers: [
-          {
-            key: "Content-Type",
-            value: "video/mp4",
-          },
-          {
-            key: "Cache-Control",
-            value: "public, max-age=31536000, immutable",
-          },
-        ],
-      },
-      {
-        source: "/(.*)\\.webm",
-        headers: [
-          {
-            key: "Content-Type",
-            value: "video/webm",
-          },
-          {
-            key: "Cache-Control",
-            value: "public, max-age=31536000, immutable",
-          },
-        ],
-      },
-    ];
-  },
 };
 
 export default config;
