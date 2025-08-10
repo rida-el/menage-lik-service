@@ -27,7 +27,7 @@ const Footer = () => {
             </div>
             <div className="flex items-center gap-2">
               <AtSign size={18} className=" font-medium text-secondaryColor" />
-              <p>Menage.lik.services@gmail.com</p>
+              <p>contact@menage-lik.ma</p>
             </div>
           </div>
         </div>
