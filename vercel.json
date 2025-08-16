@@ -1,7 +1,7 @@
 {
   "headers": [
     {
-      "source": "/(.*\\.(mp4|webm|ogg|avi|mov))",
+      "source": "/(.*\\.(mp4|webm|ogg|avi|mov))$",
       "headers": [
         {
           "key": "Content-Type",
