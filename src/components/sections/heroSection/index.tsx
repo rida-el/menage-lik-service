@@ -13,8 +13,8 @@ const HeroSection = () => {
         loop
         playsInline
       >
-        <source src="/hero-video.mp4" type="video/mp4" />
-        <source src="/hero-video.webm" type="video/webm" />
+        <source src="/hero-video2.mp4" type="video/mp4" />
+        <source src="/hero-video2.webm" type="video/webm" />
         {/* Fallback image if video doesn't load */}
         <div className="absolute left-0 top-0 h-full w-full bg-[url('/assets/services/1.jpg')] bg-cover bg-left md:bg-[url('/assets/bg.png')]"></div>
       </video>
