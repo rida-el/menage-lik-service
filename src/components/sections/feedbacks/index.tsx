@@ -114,9 +114,9 @@ const data = [
 
 const feedbacks = [
   {
-    name: "Jennifer jo",
+    name: "lamya",
     message:
-      "Ménage lik offre un travail de grande qualité à un prix très raisonnable. Ils répondent très rapidement aux emails et aux textos. Nous les utilisons depuis de nombreuses années et nous ne penserions pas à avoir quelqu'un d'autre pour entretenir notre maison.",
+      "khadija travaille très bien ma shaa allah. nous allons la garder avec nous in shaa allah. nous passerons a l'agence ce jour pour les formalites in shaa allah baaraka allahu fikoum",
   },
   {
     name: "Half Price Bourgogne",
@@ -138,9 +138,9 @@ const feedbacks = [
       "un très bon service rien a signaler je le recommande vivement Staff technique professionnel.",
   },
   {
-    name: "lamya",
+    name: "Hicham agadir",
     message:
-      "khadija travaille très bien ma shaa allah. nous allons la garder avec nous in shaa allah. nous passerons a l'agence ce jour pour les formalites in shaa allah baaraka allahu fikoum",
+      "Ménage lik offre un travail de grande qualité à un prix très raisonnable. Ils répondent très rapidement aux emails et aux textos. Nous les utilisons depuis de nombreuses années et nous ne penserions pas à avoir quelqu'un d'autre pour entretenir notre maison.",
   },
 ];
 
