@@ -188,7 +188,7 @@ export function ParticulierBooking({
                     value={type ?? ""}
                   />
                   <div className="field padding-bottom--24 border bg-gray-100 p-2">
-                    <Label htmlFor="name">Nom Complète*</Label>
+                    <Label htmlFor="name">Nom Complet*</Label>
                     <Input
                       className="rounded-none border-0 bg-gray-100"
                       id="name"
@@ -196,7 +196,7 @@ export function ParticulierBooking({
                       {...register("name", {
                         required: true,
                       })}
-                      placeholder="Nom Complète"
+                      placeholder="nom complet"
                     />
                     <p className="error-message text-red-400">
                       {errors.name && "Ce champ est obligatoire.."}
